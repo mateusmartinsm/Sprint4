@@ -8,20 +8,23 @@ import android.view.View;
 import android.widget.Button;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener {
-    Button btClientes, btProdutos, btAgenda;
+    Button btClientes, btProdutos, btOrcamento, btAgenda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btClientes = (Button) findViewById(R.id.BtClientes);
+        btClientes = findViewById(R.id.BtClientes);
         btClientes.setOnClickListener(this);
 
-        btProdutos = (Button) findViewById(R.id.BtProdutos);
+        btProdutos = findViewById(R.id.BtProdutos);
         btProdutos.setOnClickListener(this);
 
-        btAgenda = (Button) findViewById(R.id.BtAgenda);
+        btOrcamento = findViewById(R.id.BtOrcamento);
+        btOrcamento.setOnClickListener(this);
+
+        btAgenda = findViewById(R.id.BtAgenda);
         btAgenda.setOnClickListener(this);
     }
 
@@ -43,6 +46,9 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         }
         else if (v.getId()==R.id.BtProdutos){
             intencao = new Intent(this, Estoque.class);
+        }
+        else if (v.getId()==R.id.BtOrcamento){
+            intencao = new Intent(this, Orcamento.class);
         }
         else if (v.getId()==R.id.BtAgenda){
             intencao = new Intent(this, Agenda.class);

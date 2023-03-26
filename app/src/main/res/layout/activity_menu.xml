@@ -33,6 +33,7 @@
         android:layout_gravity="center"
         android:padding="@dimen/button_padding"
         android:text="@string/produtos" />
+
     <Button
         android:id="@+id/BtOrcamento"
         android:layout_width="@dimen/button_width"
@@ -41,6 +42,7 @@
         android:layout_gravity="center"
         android:padding="@dimen/button_padding"
         android:text="@string/orcamento" />
+
     <Button
         android:id="@+id/BtAgenda"
         android:layout_width="@dimen/button_width"
