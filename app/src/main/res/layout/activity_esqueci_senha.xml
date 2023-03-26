@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin"
+    tools:context=".EsqueciSenha">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recuperar_senha"
+        android:textSize="@dimen/title_text_size"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
+        android:textAlignment="center"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_redefinir_senha"/>
+
+    <EditText
+        android:id="@+id/InputEsqueciSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:paddingVertical="@dimen/input_padding"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        android:hint="@string/email"/>
+
+    <Button
+        android:id="@+id/BtEnviar"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:padding ="@dimen/button_padding"
+        android:text="@string/enviar"/>
+</LinearLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Sprint4_Projeto_Integrador _Eniac</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="clientes">Clientes</string>
+    <string name="produtos">Produtos</string>
+    <string name="orçamentos">Orçamentos</string>
+    <string name="agenda">Agenda</string>
+    <string name="sub_item_cadastro_de_clientes">sub item cadastro de clientes</string>
+    <string name="sub_item_clientes">sub item clientes</string>
+    <string name="novo_cliente">Novo cliente</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="eletro_start">ELETRO START</string>
+    <string name="orcamento">Orçamento</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Digite novamente a senha:</string>
+    <string name="ok">ok</string>
+    <string name="entrar">Entrar</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="button">button</string>
+    <string name="esqueci_senha">Esqueci a Senha</string>
+    <string name="redefinir_senha">Esqueci minha senha</string>
+    <string name="msg_registrar">Não tenho um cadastro</string>
+    <string name="primeiro_acesso">Primeiro cesso</string>
+    <string name="recuperar_senha">Recuperar Senha</string>
+    <string name="msg_redefinir_senha">Digite seu e-mail que enviaremos um link para definir uma nova senha.</string>
+    <string name="enviar">Enviar</string>
+    <string name="cadastrar_produto">Cadastrar Produto</string>
+    <string name="descricao_do_produto">Descrição do produto</string>
+    <string name="preco">Preço</string>
+    <string name="exemplo_de_imagem">Exemplo de imagem</string>
+    <string name="novo_produto">Novo Produto</string>
+    <string name="codigo">Código</string>
+    <string name="descricao">Descricao</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="agendar">Agendar</string>
+    <string name="foto_do_produto">foto do produto</string>
+    <string name="agendar_servico">Agendar Serviço</string>
+    <string name="cliente">Cliente</string>
+    <string name="data_e_hora">Data e hora</string>
+    <string name="cpf">CPF</string>
+    <string name="endereco">Endereço</string>
+    <string name="telefone">Telefone</string>
+    <string name="cadastrar_cliente">Cadastrar cliente</string>
+
+</resources>

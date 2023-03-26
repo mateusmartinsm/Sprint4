@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+
+    <item
+        android:title="@string/clientes"
+        android:id="@+id/itemclientes">
+
+      <menu>
+
+          <item android:id="@+id/subitemclientes"
+                android:title="@string/sub_item_clientes"/>
+
+          <item android:id="@+id/subitemcadastroclientes"
+              android:title="@string/sub_item_cadastro_de_clientes"/>
+
+          <item android:id="@+id/subitemnovocliente"
+              android:title="@string/novo_cliente"/>
+
+      </menu>
+    </item>
+
+
+
+    <item
+
+        android:title="@string/produtos"
+        android:id="@+id/itemprodutos"/>
+    <item
+
+        android:title="@string/orçamentos"
+        android:id="@+id/itemorçamentos"/>
+    <item
+        android:title="@string/agenda"
+        android:id="@+id/itemagenda"/>
+
+</menu>

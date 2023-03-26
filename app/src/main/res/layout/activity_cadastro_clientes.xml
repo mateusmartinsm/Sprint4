@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/novo_cliente"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003" />
+
+    <EditText
+        android:id="@+id/InputNomeCadastroClientes"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome_completo"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <EditText
+        android:id="@+id/InputCpfCadastroClientes"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/cpf"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputNomeCadastroClientes" />
+
+    <EditText
+        android:id="@+id/InputEnderecoCadastroClientes"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/endereco"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputCpfCadastroClientes" />
+
+    <EditText
+        android:id="@+id/InputTelefoneCadastroClientes"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputEnderecoCadastroClientes" />
+
+    <Button
+        android:id="@+id/ButtonAgendarServico"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/button_padding"
+        android:text="@string/cadastrar_cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputTelefoneCadastroClientes"
+        app:layout_constraintVertical_bias="0.37" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

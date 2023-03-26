@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/layout_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TxtPrimeiroAcesso"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/primeiro_acesso"
+        android:textSize="@dimen/title_text_size"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/TxtNome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:text="@string/nome_completo"
+        android:textSize="@dimen/form_text_size"/>
+
+    <EditText
+        android:id="@+id/InputNome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:autofillHints="name"
+        android:labelFor="@id/InputNome"/>
+
+    <TextView
+        android:id="@+id/TxtEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="@dimen/form_text_size"/>
+
+    <EditText
+        android:id="@+id/InputEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/InputEmail"
+        android:autofillHints="emailAddress" />
+
+    <TextView
+        android:id="@+id/TxtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        android:textSize="@dimen/form_text_size"/>
+
+    <EditText
+        android:id="@+id/InputSenha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:autofillHints="password" />
+
+    <TextView
+        android:id="@+id/TxtConfirmarSenha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar_senha"
+        android:textSize="@dimen/form_text_size"/>
+
+    <EditText
+        android:id="@+id/InputConfirmarSenha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:autofillHints="password"
+        android:labelFor="@id/InputConfirmarSenha"/>
+
+    <Button
+        android:id="@+id/txtPrimeiroAcessso_ok"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingVertical="@dimen/button_padding"
+        android:text="@string/ok" />
+
+
+</LinearLayout>
