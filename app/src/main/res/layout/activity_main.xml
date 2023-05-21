@@ -1,71 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/layout_margin"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_margin">
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/title_margin_top"
-        android:text="@string/eletro_start"
-        android:textAlignment="center"
-        android:textSize="@dimen/title_text_size" />
-
-    <EditText
-        android:id="@+id/TxtEmailMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="emailAddress"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingVertical="@dimen/input_padding" />
-
-    <EditText
-        android:id="@+id/TxtPasswordMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="password"
-        android:hint="@string/senha"
-        android:inputType="textPassword"
-        android:paddingVertical="@dimen/input_padding" />
-
-    <TextView
-        android:id="@+id/BtEsqueciSenha"
-        android:clickable="true"
-        android:focusable="true"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/button_min_height"
-        android:layout_marginTop="@dimen/button_margin"
-        android:layout_gravity="end"
-        android:gravity="center"
-        android:layout_marginBottom="100dp"
-        android:text="@string/redefinir_senha"
-        android:textColor="@color/purple_700"
-        android:fontFamily="sans-serif-black"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
+        android:text="@string/eletro_start"
+        android:textSize="@dimen/title_text_size"
+        android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/BtAcesssar"
+        android:id="@+id/BtClientes"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/button_margin"
         android:layout_gravity="center"
-        android:paddingVertical="@dimen/button_padding"
-        android:text="@string/entrar" />
+        android:padding="@dimen/button_padding"
+        android:text="@string/clientes" />
 
-    <TextView
-        android:id="@+id/BtRegistrar"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/button_min_height"
+    <Button
+        android:id="@+id/BtProdutos"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/button_margin"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/msg_registrar"
-        android:textColor="@color/purple_700"
-        android:fontFamily="sans-serif-black"/>
+        android:padding="@dimen/button_padding"
+        android:text="@string/produtos" />
+
+    <Button
+        android:id="@+id/BtOrcamento"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/button_margin"
+        android:layout_gravity="center"
+        android:padding="@dimen/button_padding"
+        android:text="@string/orcamento" />
+
+    <Button
+        android:id="@+id/BtAgenda"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/button_margin"
+        android:layout_gravity="center"
+        android:padding="@dimen/button_padding"
+        android:text="@string/agenda" />
+
+
 
 
 </LinearLayout>
+
+

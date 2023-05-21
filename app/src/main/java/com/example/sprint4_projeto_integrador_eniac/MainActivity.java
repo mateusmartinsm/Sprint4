@@ -4,54 +4,62 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btAcessar;
-    TextView btEsqueciSenha, btRegistrar;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btClientes, btProdutos, btOrcamento, btAgenda;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btAcessar = findViewById(R.id.BtAcesssar);
-        btAcessar.setOnClickListener(this);
+        btClientes = findViewById(R.id.BtClientes);
+        btClientes.setOnClickListener(this);
 
-        btEsqueciSenha = findViewById(R.id.BtEsqueciSenha);
-        btEsqueciSenha.setOnClickListener(this);
+        btProdutos = findViewById(R.id.BtProdutos);
+        btProdutos.setOnClickListener(this);
 
-        btRegistrar = findViewById(R.id.BtRegistrar);
-        btRegistrar.setOnClickListener(this);
+        btOrcamento = findViewById(R.id.BtOrcamento);
+        btOrcamento.setOnClickListener(this);
+
+        btAgenda = findViewById(R.id.BtAgenda);
+        btAgenda.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
 
-        if (v.getId()==R.id.BtAcesssar) {
-            Intent intencao = new Intent(this, Menu.class);
-            startActivity(intencao);
-        }
-        if (v.getId()==R.id.BtEsqueciSenha){
-            Intent intencao = new Intent(this, EsqueciSenha.class);
-            startActivity(intencao);
-        }
-        if (v.getId()==R.id.BtRegistrar){
-            Intent intencao = new Intent(this,PrimeiroAcesso.class);
-            startActivity(intencao);
-        }
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Intent intencao;
+
         if (v.getId()==R.id.BtClientes){
-            Intent intencao = new Intent(this,CadastroClientes.class);
-            startActivity(intencao);
+            intencao = new Intent(this, CadastroClientes.class);
         }
-        if (v.getId()==R.id.BtProdutos){
-            Intent intencao = new Intent(this, CadastroProduto.class);
-            startActivity(intencao);
+        else if (v.getId()==R.id.BtProdutos){
+            intencao = new Intent(this, Estoque.class);
         }
+        else if (v.getId()==R.id.BtOrcamento){
+            intencao = new Intent(this, Orcamento.class);
+        }
+        else if (v.getId()==R.id.BtAgenda){
+            intencao = new Intent(this, Agenda.class);
+        }
+        else return;
+        startActivity(intencao);
     }
 }

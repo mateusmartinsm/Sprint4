@@ -73,12 +73,12 @@
         android:id="@+id/InputConfirmarSenha"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:autofillHints="password"
         android:labelFor="@id/InputConfirmarSenha"/>
 
     <Button
-        android:id="@+id/txtPrimeiroAcessso_ok"
+        android:id="@+id/BtCadastrar"
         android:layout_gravity="center"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"

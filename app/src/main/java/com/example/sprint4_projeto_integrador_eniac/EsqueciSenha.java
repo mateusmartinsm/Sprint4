@@ -14,7 +14,7 @@ public class EsqueciSenha extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_esqueci_senha);
+        setContentView(R.layout.esqueci_senha);
 
         btEnviar = findViewById(R.id.BtEnviar);
         btEnviar.setOnClickListener(this);
@@ -23,7 +23,7 @@ public class EsqueciSenha extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId()==R.id.BtProdutos){
-            Intent intencao = new Intent(this, MainActivity.class);
+            Intent intencao = new Intent(this, Login.class);
             startActivity(intencao);
         }
     }

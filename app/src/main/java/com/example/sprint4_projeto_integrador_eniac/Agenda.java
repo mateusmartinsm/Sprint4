@@ -12,7 +12,7 @@ public class Agenda extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agenda);
+        setContentView(R.layout.agenda);
 
         btAgendar = findViewById(R.id.BtAgendar);
         btAgendar.setOnClickListener(this);

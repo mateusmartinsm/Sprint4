@@ -9,7 +9,7 @@ public class AgendarServico extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agendar_servico);
+        setContentView(R.layout.agendar_servico);
     }
 
     @Override
