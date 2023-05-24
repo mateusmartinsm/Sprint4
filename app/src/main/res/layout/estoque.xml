@@ -31,6 +31,8 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
             android:text="@string/descricao_do_produto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toEndOf="@+id/ImgProduto1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,99 +40,22 @@
             android:id="@+id/TxtPrecoProduto1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
             android:layout_marginTop="10dp"
             android:text="@string/preco"
-            app:layout_constraintStart_toEndOf="@+id/ImgProduto1"
+            app:layout_constraintStart_toStartOf="@+id/TxtDescProduto1"
             app:layout_constraintTop_toBottomOf="@+id/TxtDescProduto1" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/LayProduto2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/purple_200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LayProduto1">
-
-        <ImageView
-            android:id="@+id/ImgProduto2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <Button
+            android:id="@+id/button"
+            android:layout_width="52dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/del"
+            android:textSize="30sp"
+            android:backgroundTint="@color/darkRed"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_menu_gallery"
-            android:contentDescription="@string/exemplo_de_imagem" />
-
-        <TextView
-            android:id="@+id/TxtDescProduto2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/descricao_do_produto"
-            app:layout_constraintStart_toEndOf="@+id/ImgProduto2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/TxtPrecoProduto2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/preco"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImgProduto2"
-            app:layout_constraintTop_toBottomOf="@+id/TxtDescProduto2"
-            app:layout_constraintVertical_bias="0.0" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/LayProduto3"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/purple_200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LayProduto2">
-
-        <ImageView
-            android:id="@+id/ImgProduto3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/exemplo_de_imagem"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_menu_gallery" />
-
-        <TextView
-            android:id="@+id/TxtDescProduto3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/descricao_do_produto"
-            app:layout_constraintStart_toEndOf="@+id/ImgProduto3"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/TxtPrecoProduto3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/preco"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImgProduto3"
-            app:layout_constraintTop_toBottomOf="@+id/TxtDescProduto3"
-            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -142,8 +67,22 @@
         android:text="@string/novo_produto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LayProduto3"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <Button
+        android:id="@+id/BtDelProduto"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_400"
+        android:padding="@dimen/button_padding"
+        android:text="@string/deletar"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtAddProduto" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

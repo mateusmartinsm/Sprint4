@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/InputEnderecoCadastroClientes" />
 
     <Button
-        android:id="@+id/ButtonAgendarServico"
+        android:id="@+id/ButtonCadastrar"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

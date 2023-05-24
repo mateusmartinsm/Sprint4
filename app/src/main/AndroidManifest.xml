@@ -31,6 +31,9 @@
             android:name=".CadastroClientes"
             android:exported="false" />
         <activity
+            android:name=".CadastroOrcamento"
+            android:exported="false" />
+        <activity
             android:name=".EsqueciSenha"
             android:exported="false" />
         <activity

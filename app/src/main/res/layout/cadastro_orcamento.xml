@@ -6,89 +6,71 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/TxtTituloAgendarServico"
+        android:id="@+id/TextTituloCadastroOrcamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/agendar_servico"
+        android:text="@string/orcamento"
         android:textSize="@dimen/title_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14999998" />
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <EditText
-        android:id="@+id/InputClienteAgendarServico"
+        android:id="@+id/InputNomeCadastroOrcamento"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:hint="@string/cliente"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:hint="@string/nome_completo"
         android:paddingVertical="@dimen/input_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtTituloAgendarServico"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintTop_toBottomOf="@+id/TextTituloCadastroOrcamento"
+        app:layout_constraintVertical_bias="0.13" />
 
     <EditText
-        android:id="@+id/InputDataAgendarServico"
+        android:id="@+id/InputCpfCadastroOrcamento"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:hint="@string/data_e_hora"
-        android:importantForAutofill="no"
-        android:inputType="datetime"
-        android:paddingVertical="@dimen/input_padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputClienteAgendarServico" />
-
-    <EditText
-        android:id="@+id/InputEnderecoAgendarServico"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:hint="@string/endereco"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:paddingVertical="@dimen/input_padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputDataAgendarServico" />
-
-    <EditText
-        android:id="@+id/InputPrecoAgendarServico"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:hint="@string/preco"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:hint="@string/cpf"
         android:paddingVertical="@dimen/input_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEnderecoAgendarServico" />
+        app:layout_constraintTop_toBottomOf="@+id/InputNomeCadastroOrcamento" />
+
+    <EditText
+        android:id="@+id/InputEmailCadastroOrcamento"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputCpfCadastroOrcamento" />
+
+    <EditText
+        android:id="@+id/InputTelefoneCadastroOrcamento"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone"
+        android:paddingVertical="@dimen/input_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputEmailCadastroOrcamento" />
 
     <Button
-        android:id="@+id/ButtonAgendarServico"
+        android:id="@+id/ButtonOrcamentoCadastrar"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/button_padding"
-        android:text="@string/agendar_servico"
+        android:text="@string/cadastrar_orcamento"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPrecoAgendarServico"
+        app:layout_constraintTop_toBottomOf="@+id/InputTelefoneCadastroOrcamento"
         app:layout_constraintVertical_bias="0.37" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_menu_camera" />
 
     <EditText
-        android:id="@+id/InputClienteAgendarServico"
+        android:id="@+id/InputCadastroProdutoCodigo"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -29,7 +29,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/InputDataAgendarServico"
+        android:id="@+id/InputCadastroProdutoDescricao"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -40,7 +40,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/InputEnderecoAgendarServico"
+        android:id="@+id/InputCadastroProdutoQuantidade"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -51,7 +51,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/InputPrecoAgendarServico"
+        android:id="@+id/InputCadastroProdutoPreco"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -62,7 +62,7 @@
         android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/ButtonAgendarServico"
+        android:id="@+id/ButtonCadastrarProduto"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

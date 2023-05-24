@@ -1,6 +1,7 @@
 package com.example.sprint4_projeto_integrador_eniac;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +36,6 @@ public class PrimeiroAcesso extends AppCompatActivity  implements View.OnClickLi
         String SenhaCad = txtSenhaCad.getText().toString();
         String ConfSenhaCad = txtConfSenhaCad.getText().toString();
 
-
         BancoController bd = new BancoController(getBaseContext());
         String resultado;
 
@@ -43,8 +43,9 @@ public class PrimeiroAcesso extends AppCompatActivity  implements View.OnClickLi
             resultado = bd.insereDadosUsuario(NomeCad, EmailCad, SenhaCad);
 
             Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
-            limpar();
-        }else{
+            Intent tela = new Intent(this, MainActivity.class);
+            startActivity(tela);
+        } else {
             String msg = "As senhas digitadas não são iguais, digite novamente!";
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
         }

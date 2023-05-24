@@ -31,9 +31,56 @@ public class BancoController {
 
 		if (resultado == -1)
 			return "Erro ao inserir registro os dados, tente novamente!";
-		else
-			return "Dados do Usuário cadastrado com sucesso!";
+		return "Dados do Usuário cadastrado com sucesso!";
 	}
+
+	public String insereDadosCliente(String nome, String cpf, String endereco, String telefone){
+		ContentValues valores;
+		long resultado;
+		db = banco.getWritableDatabase();
+
+		valores = new ContentValues();
+		valores.put("nome", nome);
+		valores.put("cpf_cnpj", cpf);
+		valores.put("endereco", endereco);
+		valores.put("telefone", telefone);
+
+		resultado = db.insert("clientes", null, valores);
+		db.close();
+
+		if(resultado == -1)
+			return "Erro ao cadastrar cliente";
+		return "Cliente cadastrado com sucesso";
+	}
+
+	public String insereDadosProduto(String codigo, String descricao, String quantidade, float preco){
+		ContentValues valores;
+		long resultado;
+		db = banco.getWritableDatabase();
+		valores = new ContentValues();
+
+		valores.put("id", codigo);
+		valores.put("descricao", descricao);
+		valores.put("quantidade", quantidade);
+		valores.put("preco", preco);
+
+		resultado = db.insert("produtos", null, valores);
+		db.close();
+
+		if(resultado == -1)
+			return "Erro ao cadastrar produto";
+		return "Produto cadastrado com sucesso";
+	}
+
+//	public String insereDadosOrcamento(String nome, String cpf, String email, String telefone){
+//		ContentValues valores;
+//		long resultado;
+//		db = banco.getWritableDatabase();
+//		valores = new ContentValues();
+//
+//		valores.put("cliente", nome);
+//		valores.put("cpf");
+//	}
 
 	public String insereDado(String nome, String email) {
 		ContentValues valores;
@@ -123,6 +170,18 @@ public class BancoController {
 			msg = "Erro ao Excluir" ;
 		}
 
+		db.close();
+		return msg;
+	}
+
+	public String excluirProduto(int id){
+		String msg = "Produto excluído";
+		db = banco.getReadableDatabase();
+		String condicao = "produtos = " + id;
+		int linhas = db.delete("produtos", condicao,null);
+
+		if ( linhas < 1)
+			msg = "Erro ao Excluir" ;
 		db.close();
 		return msg;
 	}

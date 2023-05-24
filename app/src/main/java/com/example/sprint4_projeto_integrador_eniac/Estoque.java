@@ -24,6 +24,9 @@ public class Estoque extends AppCompatActivity implements View.OnClickListener{
         if(v.getId()==R.id.BtAddProduto){
             Intent intencao = new Intent(this, CadastroProduto.class);
             startActivity(intencao);
+        } elif(v.getId() == R.id.BtDelProduto){
+            BancoController bd = new BancoController(getBaseContext());
+            String resultado = bd.excluirProduto(id);
         }
     }
 }

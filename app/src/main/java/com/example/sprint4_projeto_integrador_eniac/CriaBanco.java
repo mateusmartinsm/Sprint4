@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CriaBanco extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "banco.db";
-    private static final int  VERSAO = 1;
+    private static final int  VERSAO = 2;
 
     public CriaBanco(Context context){
         super(context, NOME_BANCO, null, VERSAO);
@@ -38,18 +38,13 @@ public class CriaBanco extends SQLiteOpenHelper {
                 + "dataCadastro TEXT)";
         String sql2 = "CREATE TABLE produtos("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + "usuario INTEGER,"
-                + "nome TEXT,"
-                + "especificacao TEXT,"
-                + "peso REAL,"
-                + "valor REAL,"
-                + "dataFabricacao,"
-                + "modelo TEXT,"
-                + "dataCadastro TEXT)";
+                + "descricao TEXT,"
+                + "quantidade INTEGER,"
+                + "preco REAL)";
         String sql3 = "CREATE TABLE orcamentos("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "cliente INTEGER,"
-                + "usuarioo INTEGER,"
+                + "usuario INTEGER,"
                 + "carrinho INTEGER,"
                 + "descricao TEXT,"
                 + "dataCriacao TEXT,"
@@ -72,8 +67,11 @@ public class CriaBanco extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        db.execSQL("DROP TABLE IF EXISTS contatos");
-        db.execSQL("DROP TABLE IF EXISTS usuario");
+        db.execSQL("DROP TABLE IF EXISTS usuarios");
+        db.execSQL("DROP TABLE IF EXISTS clientes");
+        db.execSQL("DROP TABLE IF EXISTS produtos");
+        db.execSQL("DROP TABLE IF EXISTS orcamentos");
+        db.execSQL("DROP TABLE IF EXISTS carrinho");
         onCreate(db);
     }
 }

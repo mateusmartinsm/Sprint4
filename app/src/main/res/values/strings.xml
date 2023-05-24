@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sprint4_Projeto_Integrador _Eniac</string>
+    <string name="app_name">Eletro Start App</string>
     <string name="title_activity_menu">Menu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -56,5 +56,10 @@
     <string name="endereco">Endereço</string>
     <string name="telefone">Telefone</string>
     <string name="cadastrar_cliente">Cadastrar cliente</string>
+    <string name="novo_orcamento">Novo orçamento</string>
+    <string name="cadastrar_orcamento">cadastrar orçamento</string>
+    <string name="proximo">próximo</string>
+    <string name="deletar">Deletar</string>
+    <string name="del">-</string>
 
 </resources>
