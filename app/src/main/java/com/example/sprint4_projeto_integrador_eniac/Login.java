@@ -26,7 +26,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         btAcessar = findViewById(R.id.BtAcessar);
         btRegistrar = findViewById(R.id.BtRegistrar);
-        btEsqueciSenha = findViewById(R.id.BtEsqueciSenha);
         txtLogin = (EditText) findViewById(R.id.TxtEmailMain);
         txtSenhaLogin = (EditText) findViewById(R.id.TxtPasswordMain);
 

@@ -21,9 +21,6 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         btProdutos = findViewById(R.id.BtProdutos);
         btProdutos.setOnClickListener(this);
 
-        btOrcamento = findViewById(R.id.BtOrcamento);
-        btOrcamento.setOnClickListener(this);
-
         btAgenda = findViewById(R.id.BtAgenda);
         btAgenda.setOnClickListener(this);
     }
@@ -46,9 +43,6 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         }
         else if (v.getId()==R.id.BtProdutos){
             intencao = new Intent(this, Estoque.class);
-        }
-        else if (v.getId()==R.id.BtOrcamento){
-            intencao = new Intent(this, Orcamento.class);
         }
         else if (v.getId()==R.id.BtAgenda){
             intencao = new Intent(this, Agenda.class);

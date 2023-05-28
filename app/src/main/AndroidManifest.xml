@@ -15,11 +15,16 @@
         <activity android:name=".Orcamento"/>
         <activity android:name=".AgendarServico"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".ConsultaLista"/>
+        <activity android:name=".Clientes"/>
+        <activity android:name=".DeletarProduto"/>
+        <activity android:name=".DeletarCliente"/>
         <activity
             android:name=".Estoque"
             android:exported="false"/>
         <activity
             android:name=".Agenda"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".CadastroProduto"

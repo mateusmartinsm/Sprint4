@@ -61,5 +61,13 @@
     <string name="proximo">próximo</string>
     <string name="deletar">Deletar</string>
     <string name="del">-</string>
+    <string name="consultar">Consultar</string>
+    <string name="nome_">Nome:</string>
+    <string name="cpf_">CPF:</string>
+    <string name="endereco_">Endereço:</string>
+    <string name="telefone_">Telefone:</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="em_estoque"> em estoque</string>
+    <string name="cifrao">R$</string>
 
 </resources>

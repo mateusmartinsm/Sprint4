@@ -27,18 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btProdutos = findViewById(R.id.BtProdutos);
         btProdutos.setOnClickListener(this);
 
-        btOrcamento = findViewById(R.id.BtOrcamento);
-        btOrcamento.setOnClickListener(this);
-
         btAgenda = findViewById(R.id.BtAgenda);
         btAgenda.setOnClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
-
         getMenuInflater().inflate(R.menu.menu_principal, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -47,19 +42,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         Intent intencao;
 
-        if (v.getId()==R.id.BtClientes){
-            intencao = new Intent(this, CadastroClientes.class);
-        }
-        else if (v.getId()==R.id.BtProdutos){
+        if (v.getId()==R.id.BtClientes)
+            intencao = new Intent(this, Clientes.class);
+        else if (v.getId()==R.id.BtProdutos)
             intencao = new Intent(this, Estoque.class);
-        }
-        else if (v.getId()==R.id.BtOrcamento){
-            intencao = new Intent(this, Orcamento.class);
-        }
-        else if (v.getId()==R.id.BtAgenda){
+        else if (v.getId()==R.id.BtAgenda)
             intencao = new Intent(this, Agenda.class);
-        }
-        else return;
+        else
+            return;
         startActivity(intencao);
     }
 }

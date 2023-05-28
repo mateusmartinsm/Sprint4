@@ -14,7 +14,72 @@ public class BancoController {
 		banco = new CriaBanco(context);
 	}
 
+	public String DeletarProduto(String descricao){
+		db = banco.getReadableDatabase();
+		int retorno = db.delete("produtos", null, null);
+		if(retorno == -1)
+			return "Erro ao deletar produto";
+		return "Produto deletado";
+	}
 
+	public String DeletarCliente(String nome){
+		db = banco.getReadableDatabase();
+		int retorno = db.delete("clientes", null, null);
+		if(retorno == -1)
+			return "Erro ao deletar cliente";
+		return "Cliente deletado";
+	}
+
+	public Cursor consultarAgendamentos(String dataselecionada){
+		Cursor cursor;
+		String[] campos = { "id", "cliente", "data","horario" };
+		String filtro = "data = '" + dataselecionada + "'";
+		db = banco.getReadableDatabase();
+		cursor = db.query("agendamentos", campos, filtro, null, null,
+				null, null, null);
+		if(cursor != null)
+			cursor.moveToFirst();
+		db.close();
+		return cursor;
+	}
+
+	public Cursor consultarClientes(){
+		Cursor cursor;
+		String[] campos = {"nome", "cpf_cnpj", "endereco", "telefone"};
+		db = banco.getReadableDatabase();
+		cursor = db.query("clientes", campos, null, null, null,
+				null, null, null);
+		if(cursor != null)
+			cursor.moveToFirst();
+		db.close();
+		return cursor;
+	}
+
+	public Cursor consultarEstoque(){
+		Cursor cursor;
+		String[] campos = {"id", "descricao", "preco", "quantidade"};
+		db = banco.getReadableDatabase();
+		cursor = db.query("produtos", campos, null, null, null,
+				null, null, null);
+		if(cursor != null)
+			cursor.moveToFirst();
+		db.close();
+		return cursor;
+	}
+	public Cursor consultaAgendaHorario(String data, String horario) {
+		Cursor cursor;
+		 String[] campos = {"id", "cliente", "data", "horario"};
+		 String where = "data = '" + data + "' and horario = '" + horario + "'";
+		 db = banco.getReadableDatabase();
+		 cursor = db.query("agendamentos", campos, where, null, null, null,
+				 null, null);
+		 if (cursor != null) {
+			 cursor.moveToFirst();
+		 }
+
+		 db.close();
+		 return cursor;
+ 	}
 
 	public String insereDadosUsuario(String nome, String email, String senha) {
 		ContentValues valores;
@@ -71,6 +136,24 @@ public class BancoController {
 			return "Erro ao cadastrar produto";
 		return "Produto cadastrado com sucesso";
 	}
+
+	public String insereDadosAgendamento(String cliente, String data, String horario){
+     ContentValues valores;
+     long resultado;
+     db = banco.getWritableDatabase();
+
+     valores = new ContentValues();
+     valores.put("cliente", cliente);
+     valores.put("data", data);
+     valores.put("horario", horario);
+
+     resultado = db.insert("agendamentos", null, valores);
+     db.close();
+
+     if (resultado == -1)
+         return "Erro ao inserir agendamento!";
+	 return "Agendamento cadastrado com sucesso!";
+ }
 
 //	public String insereDadosOrcamento(String nome, String cpf, String email, String telefone){
 //		ContentValues valores;

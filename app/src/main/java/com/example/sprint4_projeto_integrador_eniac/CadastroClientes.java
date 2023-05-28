@@ -43,5 +43,6 @@ public class CadastroClientes extends AppCompatActivity implements View.OnClickL
         txtNome.requestFocus();
 
         Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, MainActivity.class);
     }
 }

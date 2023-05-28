@@ -43,7 +43,7 @@ public class PrimeiroAcesso extends AppCompatActivity  implements View.OnClickLi
             resultado = bd.insereDadosUsuario(NomeCad, EmailCad, SenhaCad);
 
             Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
-            Intent tela = new Intent(this, MainActivity.class);
+            Intent tela = new Intent(this, Login.class);
             startActivity(tela);
         } else {
             String msg = "As senhas digitadas não são iguais, digite novamente!";

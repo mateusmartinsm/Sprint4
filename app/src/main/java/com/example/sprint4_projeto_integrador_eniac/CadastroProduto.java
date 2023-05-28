@@ -39,7 +39,7 @@ public class CadastroProduto extends AppCompatActivity implements View.OnClickLi
         String resultado = bd.insereDadosProduto(codigo, descricao, quantidade, preco);
 
         Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
-        Intent tela = new Intent(this, Estoque.class);
+        Intent tela = new Intent(this, MainActivity.class);
         startActivity(tela);
     }
 }

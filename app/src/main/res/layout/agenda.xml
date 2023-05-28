@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+    <DatePicker
+        android:id="@+id/calendario"
+        android:layout_width="348dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="10dp"
         android:background="@color/light_cyan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <EditText
+        android:id="@+id/InputAgendaCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/cliente"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/calendario"
+        app:layout_constraintTop_toBottomOf="@+id/calendario"
+        android:importantForAutofill="no" />
+    <Spinner
+        android:id="@+id/SpHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/calendario"
+        app:layout_constraintTop_toBottomOf="@+id/calendario" />
+    <Button
+        android:id="@+id/BtConsultar"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingVertical="@dimen/button_padding"
+        android:text="@string/consultar"
+        app:layout_constraintBottom_toTopOf="@+id/BtAgendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
     <Button
         android:id="@+id/BtAgendar"
         android:layout_width="@dimen/button_width"
@@ -22,7 +52,8 @@
         android:text="@string/agendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toBottomOf="@+id/calendario"
+        app:layout_constraintVertical_bias="0.768" />
 </androidx.constraintlayout.widget.ConstraintLayout>

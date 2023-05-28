@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CriaBanco extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "banco.db";
-    private static final int  VERSAO = 2;
+    private static final int  VERSAO = 4;
 
     public CriaBanco(Context context){
         super(context, NOME_BANCO, null, VERSAO);
@@ -57,12 +57,18 @@ public class CriaBanco extends SQLiteOpenHelper {
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "produtos INTEGER,"
                 + "quantidade INTEGER)";
+        String sql5 = "CREATE TABLE agendamentos("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "cliente TEXT,"
+                + "data TEXT,"
+                + "horario TEXT)";
 
         db.execSQL(sql);
         db.execSQL(sql1);
         db.execSQL(sql2);
         db.execSQL(sql3);
         db.execSQL(sql4);
+        db.execSQL(sql5);
     }
 
     @Override
@@ -72,6 +78,7 @@ public class CriaBanco extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS produtos");
         db.execSQL("DROP TABLE IF EXISTS orcamentos");
         db.execSQL("DROP TABLE IF EXISTS carrinho");
+        db.execSQL("DROP TABLE IF EXISTS agendamentos");
         onCreate(db);
     }
 }
